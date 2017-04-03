@@ -16,19 +16,20 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
+
+import java.util.Iterator;
+
 import alvi17.ballon_popper.Balloons;
 import alvi17.ballon_popper.Tools.Assets;
 import alvi17.ballon_popper.Tools.Balloon;
 import alvi17.ballon_popper.Tools.Settings;
 import alvi17.ballon_popper.Tools.abstractGameScreen;
 
-import java.util.Iterator;
-
 /**
  * Game screen class
  */
 public class GameScreen extends abstractGameScreen {
-    private static final int SPAWN_SPEED_MS = 1000;
+    private static final int SPAWN_SPEED_MS = 1100;
     private static final int GAME_DURATION  = 90;
     private static final int PAUSE_DURATION = 5;
     final   Balloons       game;
@@ -171,7 +172,7 @@ public class GameScreen extends abstractGameScreen {
         }
 
         // Reduce balloons spawning delay to add difficulty over time
-        double acceleration = Math.round((TimeUtils.nanoTime() - gameStartTime) / 130000000);
+        double acceleration = Math.round((TimeUtils.nanoTime() - gameStartTime) / 115000000);
 
         // check if we need to create a new raindrop
         if (gameIsPlaying) {
